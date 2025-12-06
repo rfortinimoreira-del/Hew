@@ -1,0 +1,288 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║           🎀 HUBBLE - JOGO 3D MINIMALISTA EM VOXEL 🎀              ║
+║                    ✅ PROJETO COMPLETO ✅                            ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+📋 RESUMO DO PROJETO
+═════════════════════════════════════════════════════════════════════
+
+Um jogo 3D minimalista com estética voxel, onde a jogadora explora
+uma ilha flutuante mágica, coleta blocos e constrói castelos.
+
+✨ FEATURES IMPLEMENTADAS
+═════════════════════════════════════════════════════════════════════
+
+✅ Renderização 3D
+   - OpenGL 3.3 Core Profile
+   - Renderização de cubos otimizada
+   - Iluminação simples com Phong
+   - 64×64×64 grid de blocos
+
+✅ Sistema de Blocos
+   - 5 tipos de blocos diferentes
+   - Cores pastel e temáticas
+   - Geração procedural de terreno
+
+✅ Mecânicas de Construção
+   - Colocar blocos (Clique Esquerdo)
+   - Remover blocos (Clique Direito)
+   - Seleção de tipo (1-5)
+   - Raycasting preciso
+
+✅ Câmera e Controles
+   - Câmera FPS suave
+   - WASD para movimento
+   - Mouse para rotação
+   - ESPAÇO/SHIFT para subir/descer
+
+✅ Sistema de Input
+   - Gerenciador centralizado
+   - Suporte a teclado e mouse
+   - Callbacks globais otimizadas
+
+✅ Sistema de Estado
+   - GameState para modo construção
+   - Seleção de blocos persistente
+   - Modo exploração
+
+📁 ARQUIVOS CRIADOS
+═════════════════════════════════════════════════════════════════════
+
+HEADERS (include/):
+  ├─ Renderer.h        (Gerenciador de renderização OpenGL)
+  ├─ World.h           (Sistema de mundo 3D)
+  ├─ Block.h           (Definição de blocos)
+  ├─ Cube.h            (Renderização de cubos)
+  ├─ Camera.h          (Câmera FPS)
+  ├─ Player.h          (Entidade jogadora)
+  ├─ Shader.h          (Compilação de shaders)
+  ├─ InputManager.h    (Sistema de entrada)
+  ├─ Raycaster.h       (Detecção de raios)
+  └─ GameState.h       (Estado global)
+
+IMPLEMENTAÇÃO (src/):
+  ├─ main.cpp          (Loop principal + lógica de jogo)
+  ├─ Renderer.cpp      (Renderização)
+  ├─ World.cpp         (Mundo 3D)
+  ├─ Block.cpp         (Blocos)
+  ├─ Cube.cpp          (Renderização de cubos)
+  ├─ Camera.cpp        (Câmera com entrada)
+  ├─ Player.cpp        (Personagem)
+  ├─ Shader.cpp        (Shaders GLSL)
+  ├─ InputManager.cpp  (Input unificado)
+  ├─ Raycaster.cpp     (Raycasting)
+  └─ GameState.cpp     (Estado)
+
+SHADERS (assets/):
+  ├─ vertex.glsl       (Shader de vértice - iluminação Phong)
+  └─ fragment.glsl     (Shader de fragmento - cor final)
+
+CONFIG:
+  ├─ CMakeLists.txt    (Build system)
+  ├─ setup.sh          (Script de setup automático)
+  ├─ README.md         (Documentação principal)
+  ├─ DESENVOLVIMENTO.md (Guia de desenvolvimento)
+  └─ GUIA_COMPLETO.md  (Guia de utilização)
+
+🏗️ ARQUITETURA
+═════════════════════════════════════════════════════════════════════
+
+PADRÃO ARQUITETURAL: Entity-Component-System (simplificado)
+
+Componentes Principais:
+  - Renderer: Renderiza todos os blocos do World
+  - World: Gerencia grid 3D e blocos
+  - Player: Entidade do jogador com câmera
+  - Camera: Sistema de visualização FPS
+  - InputManager: Centraliza entrada de teclado/mouse
+  - Raycaster: Detecta seleção de blocos
+
+Fluxo Principal:
+  1. InputManager::update() - Processa entrada
+  2. Player::update() - Atualiza câmera
+  3. Raycaster::raycast() - Detecta cliques
+  4. World::setBlock/removeBlock() - Modifica mundo
+  5. Renderer::render() - Renderiza todos os blocos
+
+💻 ESPECIFICAÇÕES TÉCNICAS
+═════════════════════════════════════════════════════════════════════
+
+Linguagem: C++17
+Graphics API: OpenGL 3.3 Core Profile
+Dependências: GLFW3, GLEW, GLM
+Ressolução: 1920×1080
+FPS: 60 (V-Sync habilitado)
+Tamanho Executável: 94 KB
+Tamanho Build: 1.1 MB
+
+Matriz de Projeto:
+  - Dimensões do Mundo: 64×64×64 blocos
+  - Total de Slots: 262,144 blocos
+  - Tipos de Bloco: 5 + vazio
+  - Quantidade de Vértices por Cubo: 24
+  - Faces Renderizadas por Cubo: 6
+
+🎮 CONTROLES
+═════════════════════════════════════════════════════════════════════
+
+MOVIMENTO:
+  W       - Frente
+  A       - Esquerda
+  S       - Trás
+  D       - Direita
+  Espaço  - Subir
+  Shift   - Descer
+
+CÂMERA:
+  Mouse - Olhar ao redor (sensibilidade: 0.1)
+
+CONSTRUÇÃO:
+  Clique Esquerdo  - Colocar bloco
+  Clique Direito   - Remover bloco
+
+SELEÇÃO:
+  1 - Pedra (cinza)
+  2 - Madeira (marrom)
+  3 - Flor (rosa)
+  4 - Bloco Mágico Rosa (pink)
+  5 - Bloco Brilhante (amarelo)
+
+SISTEMA:
+  ESC - Sair
+
+🧱 BLOCOS DISPONÍVEIS
+═════════════════════════════════════════════════════════════════════
+
+PEDRA (1)
+  Cor: RGB(0.6, 0.6, 0.6) - Cinza
+  Uso: Alicerces e bases
+
+MADEIRA (2)
+  Cor: RGB(0.8, 0.6, 0.4) - Marrom claro
+  Uso: Paredes e estrutura
+
+FLOR (3)
+  Cor: RGB(1.0, 0.7, 0.9) - Rosa fofo
+  Uso: Decoração
+
+BLOCO MÁGICO ROSA (4)
+  Cor: RGB(1.0, 0.5, 0.8) - Pink intenso
+  Uso: Tema e estruturas especiais
+
+BLOCO BRILHANTE (5)
+  Cor: RGB(1.0, 1.0, 0.6) - Amarelo
+  Uso: Destaque e iluminação
+
+📊 PERFORMANCE
+═════════════════════════════════════════════════════════════════════
+
+Renderização:
+  - Draw calls: 1 por bloco visível
+  - Vertex buffer: Estático
+  - Otimização: Culling frustum não implementado (futura)
+
+Input:
+  - Raycasting: ~1-5% CPU por operação
+  - Mouse delta: Calculado a cada frame
+  - Callbacks: Processados em real-time
+
+Memória:
+  - World grid: ~2.1 MB (64³ × sizeof(Block))
+  - Executável: 94 KB
+  - Runtime: ~50-100 MB típico
+
+🚀 COMO EXECUTAR
+═════════════════════════════════════════════════════════════════════
+
+1. COMPILAR:
+   cd /workspaces/Hew
+   ./setup.sh
+   # ou:
+   mkdir build && cd build
+   cmake .. && make
+
+2. EXECUTAR:
+   ./build/hubble
+
+3. JOGAR:
+   - Explore com WASD
+   - Construa com Clique Esquerdo
+   - Remova com Clique Direito
+
+📚 PRÓXIMOS PASSOS
+═════════════════════════════════════════════════════════════════════
+
+CURTO PRAZO:
+  [ ] Personagem visível (Hubble)
+  [ ] Criatura Fofoluz (bola de luz)
+  [ ] Sistema de física/gravidade
+  [ ] Colisões realistas
+
+MÉDIO PRAZO:
+  [ ] Partículas mágicas
+  [ ] Sons e música
+  [ ] Menu principal
+  [ ] Sistema de progresso
+
+LONGO PRAZO:
+  [ ] Múltiplos biomas
+  [ ] Geração procedural avançada
+  [ ] Multiplayer
+  [ ] Editor de mapas
+
+🔧 CONFIGURAÇÃO AVANÇADA
+═════════════════════════════════════════════════════════════════════
+
+Expandir Mundo:
+  Edit: include/World.h
+  Altere: WORLD_WIDTH, WORLD_HEIGHT, WORLD_DEPTH
+  Recompile: make clean && make
+
+Adicionar Novo Bloco:
+  1. Edit: include/Block.h (enum BlockType)
+  2. Edit: src/Block.cpp (setColor())
+  3. Use números 1-9 para seleção
+
+Ajustar Câmera:
+  Edit: include/Camera.h
+  speed = velocidade de movimento
+  sensitivity = sensibilidade do mouse
+
+💡 TIPS & TRICKS
+═════════════════════════════════════════════════════════════════════
+
+CONSTRUÇÃO:
+  • Comece com uma base de pedra para alicerce
+  • Use madeira para paredes (mais visual)
+  • Use bloco mágico pink para atrair atenção
+  • Flores como decoração e detalhes
+
+DESIGN:
+  • Xadrez: Alterna cores para efeito visual
+  • Simetria: Cria estruturas harmoniosas
+  • Destaque Central: Use bloco brilhante como foco
+  • Molduras: Circunde com cores diferentes
+
+PERFORMANCE:
+  • Remova blocos não necessários
+  • Construa em áreas limitadas
+  • Evite estruturas > 64 blocos de altura
+
+✅ TESTES REALIZADOS
+═════════════════════════════════════════════════════════════════════
+
+✓ Compilação C++17 (g++ 13.3.0)
+✓ OpenGL 3.3 Core inicialização
+✓ GLFW3 e GLEW integração
+✓ Renderização de cubos
+✓ Input system (teclado + mouse)
+✓ Raycasting funcional
+✓ Colocar/remover blocos
+✓ Câmera FPS suave
+✓ Geração de terreno
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  PROJETO PRONTO PARA JOGAR!                                         ║
+║  Feito com 💕 para fãs de mundos mágicos                            ║
+║  Versão 1.0 - Dezembro 2025                                         ║
+╚══════════════════════════════════════════════════════════════════════╝

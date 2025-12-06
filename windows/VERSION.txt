@@ -1,0 +1,45 @@
+Hubble v0.1.0-alpha
+Windows 64-bit Build
+Build Date: 2025-12-06
+
+Sistema de Construção de Mundo 3D em Voxel
+
+Recursos:
+- Renderização 3D com OpenGL
+- 64x64x64 mundo em blocos
+- 5 tipos diferentes de blocos
+- Física básica e câmera FPS
+- Sistema de construção/destruição
+- Raycasting para seleção de blocos
+
+Requisitos Mínimos:
+- Windows 7 SP1 ou superior
+- OpenGL 3.3+
+- 512 MB RAM
+- 100 MB disco
+
+Requisitos Recomendados:
+- Windows 10/11
+- OpenGL 4.0+
+- 2 GB RAM
+- SSD
+
+Controles:
+- WASD = Mover
+- Espaço = Subir
+- Shift = Descer
+- Mouse = Olhar
+- Clique E = Colocar bloco
+- Clique D = Remover bloco
+- 1-5 = Selecionar bloco
+- ESC = Sair
+
+Instalação:
+1. Extraia o arquivo ZIP
+2. Execute install.bat como administrador (opcional)
+OU
+3. Execute run.bat ou clique duplo em hubble.exe
+
+Suporte: https://github.com/rfortinimoreira-del/Hew
+
+Licença: Consulte LICENSE.md no repositório

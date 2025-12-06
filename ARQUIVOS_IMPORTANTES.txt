@@ -1,0 +1,71 @@
+🎀 HUBBLE - ARQUIVOS IMPORTANTES
+==================================
+
+📦 DISTRIBUIÇÃO WINDOWS (PRONTO PARA USAR)
+-------------------------------------------
+✓ Hubble-Windows-x64.zip (42 KB)
+  → Pacote completo para distribuição
+  → Extrair e executar run.bat
+  → Ou instalar com install.bat
+
+✓ windows/hubble.exe (117 KB)
+  → Executável direto (sem instalação)
+  → Executar diretamente
+  → Requer assets na pasta assets/
+
+✓ windows/assets/
+  → vertex.glsl - Shader de vértice
+  → fragment.glsl - Shader de fragmento
+
+🖥️ WINDOWS SCRIPTS
+-------------------
+✓ windows/run.bat
+  → Script rápido para executar o jogo
+
+✓ windows/install.bat
+  → Instalador (requer admin)
+  → Instala em Program Files
+  → Cria atalhos no Menu Iniciar e Desktop
+
+📖 DOCUMENTAÇÃO
+----------------
+✓ windows/README.txt - Instruções básicas
+✓ windows/GUIA_WINDOWS.md - Guia completo
+✓ windows/VERSION.txt - Informações de versão
+✓ CONCLUSAO_PROJETO.md - Relatório final completo
+
+🔨 SCRIPTS DE BUILD (Para Linux/Dev)
+-------------------------------------
+✓ setup.sh - Setup de dependências Linux
+✓ build-windows-portable.sh - Cria EXE Windows
+✓ build-windows.sh - Build com MinGW avançado
+✓ package-windows.sh - Cria ZIP para distribuição
+✓ build-all.sh - Build completo Linux + Windows
+
+📂 ESTRUTURA FONTE
+------------------
+✓ src/ - Código-fonte C++
+✓ include/ - Headers
+✓ assets/ - Shaders GLSL
+✓ build/ - Executável Linux (hubble)
+✓ CMakeLists.txt - Configuração CMake
+
+🎮 COMO USAR NO WINDOWS
+------------------------
+1. Baixe: Hubble-Windows-x64.zip
+2. Extraia em qualquer pasta
+3. Execute: run.bat (ou install.bat para instalação)
+4. Aproveite! 🎮
+
+⌨️ CONTROLES RÁPIDOS
+---------------------
+WASD = Mover
+Espaço = Subir
+Shift = Descer
+Mouse = Olhar
+Clique E = Colocar bloco
+Clique D = Remover bloco
+1-5 = Selecionar tipo de bloco
+ESC = Sair
+
+✨ PRONTO PARA DISTRIBUIÇÃO!

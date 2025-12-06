@@ -1,0 +1,22 @@
+CXX = x86_64-w64-mingw32-g++
+CXXFLAGS = -std=c++17 -Wall -Wextra -O3 -fstatic -static-libgcc -static-libstdc++
+LDFLAGS = -static -lmingw32 -lSDL2main -lSDL2 -lopengl32 -lglu32 -static-libgcc -static-libstdc++
+
+# Se não tem OpenGL, usar versão simplificada
+SOURCES = src/main.cpp src/Renderer.cpp src/World.cpp src/Player.cpp src/Camera.cpp src/Block.cpp src/Cube.cpp src/Shader.cpp src/InputManager.cpp src/Raycaster.cpp src/GameState.cpp
+
+OBJECTS = $(SOURCES:.cpp=.o)
+TARGET = hubble.exe
+
+all: $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	$(CXX) $(OBJECTS) -o $(TARGET) $(LDFLAGS) -I./include
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@ -I./include
+
+clean:
+	rm -f $(OBJECTS) $(TARGET)
+
+.PHONY: all clean
