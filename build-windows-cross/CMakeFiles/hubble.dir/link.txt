@@ -1,0 +1,3 @@
+/usr/bin/cmake -E rm -f CMakeFiles/hubble.dir/objects.a
+/usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/hubble.dir/objects.a @CMakeFiles/hubble.dir/objects1.rsp
+/workspaces/Hew/mingw-g++-wrapper.sh  -static-libgcc -static-libstdc++ -fPIC --sysroot=/usr/x86_64-w64-mingw32 -static-libgcc -static-libstdc++ -fPIC --sysroot=/usr/x86_64-w64-mingw32 -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles/hubble.dir/objects.a -Wl,--no-whole-archive -o hubble.exe -Wl,--out-implib,libhubble.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/hubble.dir/linkLibs.rsp

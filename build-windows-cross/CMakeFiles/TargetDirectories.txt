@@ -1,0 +1,3 @@
+/workspaces/Hew/build-windows-cross/CMakeFiles/hubble.dir
+/workspaces/Hew/build-windows-cross/CMakeFiles/edit_cache.dir
+/workspaces/Hew/build-windows-cross/CMakeFiles/rebuild_cache.dir

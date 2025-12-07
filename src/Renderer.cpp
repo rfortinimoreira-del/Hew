@@ -1,6 +1,6 @@
 #include "Renderer.h"
 #include "Cube.h"
-#include <GL/glew.h>
+#include <glad/gl.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -36,10 +36,9 @@ void Renderer::init() {
     
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);
-    
-    glewExperimental = GL_TRUE;
-    if (glewInit() != GLEW_OK) {
-        std::cerr << "Failed to initialize GLEW" << std::endl;
+
+    if (!gladLoadGLLoader((GLADloadfunc)glfwGetProcAddress)) {
+        std::cerr << "Failed to initialize GL loader (glad)" << std::endl;
         return;
     }
     

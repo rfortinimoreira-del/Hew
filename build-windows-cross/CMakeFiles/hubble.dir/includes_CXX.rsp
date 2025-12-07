@@ -1,0 +1,1 @@
+-I/workspaces/Hew/include -I/workspaces/Hew/third_party/glad/include -isystem "/workspaces/Hew/windows/mingw-deps/include" -isystem /usr/include

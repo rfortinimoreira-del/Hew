@@ -1,0 +1,15 @@
+/workspaces/Hew/build-cross/glfw/build/CMakeFiles/uninstall.dir
+/workspaces/Hew/build-cross/glfw/build/CMakeFiles/edit_cache.dir
+/workspaces/Hew/build-cross/glfw/build/CMakeFiles/rebuild_cache.dir
+/workspaces/Hew/build-cross/glfw/build/CMakeFiles/list_install_components.dir
+/workspaces/Hew/build-cross/glfw/build/CMakeFiles/install.dir
+/workspaces/Hew/build-cross/glfw/build/CMakeFiles/install/local.dir
+/workspaces/Hew/build-cross/glfw/build/CMakeFiles/install/strip.dir
+/workspaces/Hew/build-cross/glfw/build/src/CMakeFiles/update_mappings.dir
+/workspaces/Hew/build-cross/glfw/build/src/CMakeFiles/glfw.dir
+/workspaces/Hew/build-cross/glfw/build/src/CMakeFiles/edit_cache.dir
+/workspaces/Hew/build-cross/glfw/build/src/CMakeFiles/rebuild_cache.dir
+/workspaces/Hew/build-cross/glfw/build/src/CMakeFiles/list_install_components.dir
+/workspaces/Hew/build-cross/glfw/build/src/CMakeFiles/install.dir
+/workspaces/Hew/build-cross/glfw/build/src/CMakeFiles/install/local.dir
+/workspaces/Hew/build-cross/glfw/build/src/CMakeFiles/install/strip.dir

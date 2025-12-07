@@ -2,7 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-#include <GL/glew.h>
+#include <glad/gl.h>
 
 Shader::Shader(const std::string& vertexPath, const std::string& fragmentPath) {
     std::string vertexCode = readFile(vertexPath);

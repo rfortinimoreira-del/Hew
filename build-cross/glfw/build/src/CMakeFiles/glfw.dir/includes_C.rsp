@@ -1,0 +1,1 @@
+-I"/workspaces/Hew/build-cross/glfw/include" -I"/workspaces/Hew/build-cross/glfw/src" -I"/workspaces/Hew/build-cross/glfw/build/src"
